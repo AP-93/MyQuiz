@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Flag Quiz</string>
+    <string name="play">Play</string>
+    <string name="score">Score</string>
+    <string name="Rules">rules</string>
+    <string name="start">START</string>
+    <string name="highscore">Highscore</string>
+    <string name="line">-</string>
+    <string name="reset">Reset</string>
+    <string name="score_n_0">score:\n  0</string>
+    <string name="bonus">BONUS:\n  x1</string>
+    <string name="menu">Menu</string>
+    <string name="restart">Restart</string>
+</resources>

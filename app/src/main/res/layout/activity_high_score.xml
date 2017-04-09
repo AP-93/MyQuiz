@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:layout_margin="16dp"
+    android:orientation="vertical"
+    tools:context="com.example.ante.flagquiz.HighScoreActivity">
+
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitStart"
+        android:adjustViewBounds="true"
+        android:src="@drawable/highscore" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="32dp"
+        android:layout_weight="6">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+
+                android:id="@+id/textViewScore1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/line" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+
+                android:id="@+id/textViewScore2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/line" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+
+                android:id="@+id/textViewScore3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/line" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+
+                android:id="@+id/textViewScore4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/line" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+
+                android:id="@+id/textViewScore5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/line" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+
+                android:id="@+id/textViewScore6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/line" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+
+                android:id="@+id/textViewScore7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/line" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+
+                android:id="@+id/textViewScore8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/line" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+
+                android:id="@+id/textViewScore9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/line" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/textViewScore10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="@string/line" />
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/menu_button_shape"
+        android:onClick="resetScore"
+        android:text="@string/reset"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold" />
+</LinearLayout>
