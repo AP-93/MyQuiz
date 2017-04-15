@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.ante.flagquiz">
+    package="com.apquiz.ante.flagquiz">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -8,8 +11,17 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <meta-data
+            android:name="com.google.android.gms.games.APP_ID"
+            android:value="@string/app_id" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+
         <activity
-            android:name=".MainActivity"
+            android:name="com.apquiz.ante.flagquiz.MainActivity"
             android:configChanges="orientation"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -19,14 +31,14 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".PlayActivity"
+            android:name="com.apquiz.ante.flagquiz.PlayActivity"
             android:configChanges="orientation"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".HighScoreActivity"
+            android:name="com.apquiz.ante.flagquiz.HighScoreActivity"
             android:configChanges="orientation"
             android:screenOrientation="portrait" />
-        <activity android:name=".RulesActivity"></activity>
+        <activity android:name="com.apquiz.ante.flagquiz.RulesActivity" />
     </application>
 
 </manifest>

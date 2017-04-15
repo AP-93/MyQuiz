@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+Google Play game services IDs.
+Save this file as res/values/games-ids.xml in your project.
+-->
+<resources>
+    <string name="app_id">612925356166</string>
+    <string name="package_name">com.apquiz.ante.flagquiz</string>
+    <string name="achievement_10_different_flags">CgkIhvHKqesREAIQAQ</string>
+    <string name="achievement_25_different_flags.">CgkIhvHKqesREAIQAg</string>
+    <string name="achievement_50_different_flags.">CgkIhvHKqesREAIQAw</string>
+    <string name="achievement_75_different_flags.">CgkIhvHKqesREAIQCA</string>
+    <string name="achievement_100_different_flags.">CgkIhvHKqesREAIQBA</string>
+    <string name="achievement_125_different_flags.">CgkIhvHKqesREAIQBQ</string>
+    <string name="achievement_150_different_flags.">CgkIhvHKqesREAIQBw</string>
+    <string name="achievement_name_all_flags">CgkIhvHKqesREAIQCQ</string>
+    <string name="leaderboard_leaderboard">CgkIhvHKqesREAIQBg</string>
+</resources>

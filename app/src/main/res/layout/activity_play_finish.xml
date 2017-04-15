@@ -4,6 +4,7 @@
     android:layout_height="wrap_content"
     android:layout_margin="16dp"
     android:gravity="center"
+    android:background="@drawable/finidialogbacground"
     android:orientation="vertical">
 
     <ImageView
@@ -78,20 +79,22 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:background="@drawable/menu_button_shape"
+            android:background="@drawable/button_state"
             android:text="@string/menu"
             android:textColor="@color/colorPrimaryDark"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/restartButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:background="@drawable/menu_button_shape"
+            android:background="@drawable/button_state"
             android:onClick="restartGame"
             android:text="@string/restart"
-            android:textColor="@color/colorPrimaryDark" />
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold" />
 
 
     </LinearLayout>

@@ -2,12 +2,13 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
+    android:background="@drawable/backplay"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="16dp"
     android:gravity="center">
 
     <ImageView
+        android:layout_marginTop="8dp"
         android:id="@+id/imageView4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -15,38 +16,54 @@
         android:adjustViewBounds="true"
         app:srcCompat="@drawable/rules" />
 
+    <LinearLayout
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:orientation="vertical"
+        android:background="@drawable/button_shape"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
     <TextView
-        android:padding="16dp"
+        android:padding="8dp"
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="- For each selected flag, name the country!"
-        android:textAlignment="center" />
+        android:text="@string/for_each_selected_flag_name_the_country" />
 
+        <View
+            android:background="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp" />
     <TextView
-        android:padding="16dp"
+        android:padding="8dp"
         android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="- Every correct answer gives you 10 points and every wrong answer reduces 3 points."
-        android:textAlignment="center" />
+        android:text="@string/every_correct_answer_gives_you_10_points_and_every_wrong_answer_reduces_3_points" />
 
-    <TextView
-        android:padding="16dp"
+        <View
+            android:background="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp" />
+
+        <TextView
+            android:padding="8dp"
         android:id="@+id/textView4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="- The more correct answers you get in a row, the more points you can earn."
-        android:textAlignment="center" />
+            android:text="@string/the_more_correct_answers_you_get_in_a_row_the_more_points_you_can_earn" />
 
+        <View
+            android:background="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp" />
     <TextView
-        android:padding="16dp"
         android:id="@+id/textView5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="- Have fun!"
-        android:textAlignment="center" />
-
+        android:padding="8dp"
+        android:text="@string/have_fun" />
+    </LinearLayout>
     <ImageView
         android:layout_margin="16dp"
         android:id="@+id/imageView2"

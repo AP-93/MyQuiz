@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">Flag Quiz</string>
-    <string name="play">Play</string>
-    <string name="score">Score</string>
-    <string name="Rules">rules</string>
+    <string name="play">PLAY</string>
+    <string name="score">SCORE</string>
+    <string name="Rules">RULES</string>
     <string name="start">START</string>
     <string name="highscore">Highscore</string>
     <string name="line">-</string>
@@ -11,4 +11,11 @@
     <string name="bonus">BONUS:\n  x1</string>
     <string name="menu">Menu</string>
     <string name="restart">Restart</string>
+    <string name="leaderboard">LEADERBOARD</string>
+    <string name="signin_other_error">There was an issue with sign-in, please try again later.</string>
+    <string name="signin_failure">Failed to sign in. </string>
+    <string name="have_fun">Have fun!</string>
+    <string name="the_more_correct_answers_you_get_in_a_row_the_more_points_you_can_earn">The more correct answers you get in a row, the more points you can earn.</string>
+    <string name="every_correct_answer_gives_you_10_points_and_every_wrong_answer_reduces_3_points">Every correct answer gives you 10 points and every wrong answer reduces 3 points.</string>
+    <string name="for_each_selected_flag_name_the_country">For each selected flag, name the country!</string>
 </resources>

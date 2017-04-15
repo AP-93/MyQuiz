@@ -6,7 +6,7 @@
     android:background="@drawable/backplay"
     android:orientation="vertical"
     android:padding="16dp"
-    tools:context="com.example.ante.flagquiz.PlayActivity">
+    tools:context="com.apquiz.ante.flagquiz.PlayActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -47,7 +47,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:max="600"
-                    android:progress="500"
+                    android:progress="200"
                     android:progressDrawable="@drawable/progressbar_background"
                     android:secondaryProgress="600" />
 
@@ -122,7 +122,7 @@
             android:layout_gravity="center"
             android:layout_margin="8dp"
             android:layout_weight="1"
-            android:background="@drawable/button_shape"
+            android:background="@drawable/play_button"
             android:gravity="center"
             android:onClick="nextQuestion"
             android:textColor="@color/colorPrimaryDark"
@@ -135,7 +135,7 @@
             android:layout_gravity="center"
             android:layout_margin="8dp"
             android:layout_weight="1"
-            android:background="@drawable/button_shape"
+            android:background="@drawable/play_button"
             android:gravity="center"
             android:onClick="nextQuestion"
             android:textColor="@color/colorPrimaryDark"
@@ -149,7 +149,7 @@
             android:layout_gravity="center"
             android:layout_margin="8dp"
             android:layout_weight="1"
-            android:background="@drawable/button_shape"
+            android:background="@drawable/play_button"
             android:onClick="nextQuestion"
             android:textColor="@color/colorPrimaryDark"
             android:textStyle="bold" />
@@ -161,7 +161,7 @@
             android:layout_gravity="center"
             android:layout_margin="8dp"
             android:layout_weight="1"
-            android:background="@drawable/button_shape"
+            android:background="@drawable/play_button"
             android:onClick="nextQuestion"
             android:textColor="@color/colorPrimaryDark"
             android:textStyle="bold" />
