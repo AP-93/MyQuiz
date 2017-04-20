@@ -91,11 +91,10 @@
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:background="@drawable/button_state"
-            android:onClick="restartGame"
             android:text="@string/restart"
             android:textColor="@color/colorPrimaryDark"
             android:textStyle="bold" />
-
-
     </LinearLayout>
+
+
 </LinearLayout>

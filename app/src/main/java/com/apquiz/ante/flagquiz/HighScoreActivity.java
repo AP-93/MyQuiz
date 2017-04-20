@@ -7,6 +7,8 @@ import android.widget.TextView;
 
 import com.apquiz.ante.flagquiz.Data.QuestionDbHelper;
 import com.apquiz.ante.flagquiz.model.RankingModel;
+import com.kobakei.ratethisapp.RateThisApp;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -82,5 +84,15 @@ public class HighScoreActivity extends AppCompatActivity {
 
         db.resetScore();
 
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        // Monitor launch times and interval from installation
+        RateThisApp.onStart(this);
+        // If the condition is satisfied, "Rate this app" dialog will be shown
+        RateThisApp.showRateDialogIfNeeded(this);
     }
 }

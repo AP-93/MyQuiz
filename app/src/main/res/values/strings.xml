@@ -18,4 +18,8 @@
     <string name="the_more_correct_answers_you_get_in_a_row_the_more_points_you_can_earn">The more correct answers you get in a row, the more points you can earn.</string>
     <string name="every_correct_answer_gives_you_10_points_and_every_wrong_answer_reduces_3_points">Every correct answer gives you 10 points and every wrong answer reduces 3 points.</string>
     <string name="for_each_selected_flag_name_the_country">For each selected flag, name the country!</string>
+
+
+    <string name="banner_ad_unit_id">ca-app-pub-2460649164396515/8463640785</string>
+
 </resources>

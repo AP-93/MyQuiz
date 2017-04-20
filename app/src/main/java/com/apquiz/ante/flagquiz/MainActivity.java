@@ -1,4 +1,5 @@
 package com.apquiz.ante.flagquiz;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -6,13 +7,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.apquiz.ante.flagquiz.Data.QuestionDbHelper;
+import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.games.Games;
-
 import com.google.android.gms.games.GamesActivityResultCodes;
 import com.google.example.games.basegameutils.BaseGameUtils;
+import com.google.firebase.analytics.FirebaseAnalytics;
+import com.kobakei.ratethisapp.RateThisApp;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, GoogleApiClient.ConnectionCallbacks,
@@ -32,7 +37,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private boolean mAutoStartSignInflow = true;
     private boolean mSignInClicked = false;
 
+    private static final String TAG = "MainActivity";
 
+    private AdView mAdView;
+    private FirebaseAnalytics mFirebaseAnalytics;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +57,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.sign_in_button).setOnClickListener(this);
         findViewById(R.id.sign_out_button).setOnClickListener(this);
 
+        MobileAds.initialize(getApplicationContext(), "ca-app-pub-2460649164396515~6986907589");
+        mAdView = (AdView) findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+
 
         // Create the Google Api Client with access to the Play Games services
         mGoogleApiClient = new GoogleApiClient.Builder(this)
@@ -57,6 +70,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 .addApi(Games.API).addScope(Games.SCOPE_GAMES)
                 // add other APIs and scopes here as needed
                 .build();
+
+// Obtain the FirebaseAnalytics instance.
+        mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
+        Bundle bundle = new Bundle();
+        mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.LOGIN, bundle);
 
 
     }
@@ -88,29 +106,28 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             findViewById(R.id.sign_out_button).setVisibility(View.GONE);
         } else if (view.getId() == R.id.show_leaderboard) {
 
-            if (mGoogleApiClient != null && mGoogleApiClient.isConnected()) {
+            if (mGoogleApiClient != null && mGoogleApiClient.isConnected())
                 sendScoretoLeaderboard();
-                startActivityForResult(Games.Leaderboards.getLeaderboardIntent(
-                        mGoogleApiClient, getString(R.string.leaderboard_leaderboard)), 1);
-            } else {
+
+            else {
                 signInClicked();
 
-                if (mGoogleApiClient != null && mGoogleApiClient.isConnected()) {
+                if (mGoogleApiClient != null && mGoogleApiClient.isConnected())
                     sendScoretoLeaderboard();
-                    startActivityForResult(Games.Leaderboards.getLeaderboardIntent(
-                            mGoogleApiClient, getString(R.string.leaderboard_leaderboard)), 1);
-
-                }
             }
         }
     }
 
 
     private void sendScoretoLeaderboard() {
+
         dbHelper = new QuestionDbHelper(this);
         highscore = dbHelper.getHighscore();
+
         Games.Leaderboards.submitScore(mGoogleApiClient, "CgkIhvHKqesREAIQBg", highscore);
 
+        startActivityForResult(Games.Leaderboards.getLeaderboardIntent(
+                mGoogleApiClient, getString(R.string.leaderboard_leaderboard)), 1);
     }
 
 
@@ -120,6 +137,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         // player to proceed.
         findViewById(R.id.sign_in_button).setVisibility(View.GONE);
         findViewById(R.id.sign_out_button).setVisibility(View.VISIBLE);
+
+        // Monitor launch times and interval from installation
+        RateThisApp.onStart(this);
+        // If the condition is satisfied, "Rate this app" dialog will be shown
+        RateThisApp.showRateDialogIfNeeded(this);
     }
 
 

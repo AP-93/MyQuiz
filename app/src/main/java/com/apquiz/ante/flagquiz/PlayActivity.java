@@ -1,24 +1,16 @@
 package com.apquiz.ante.flagquiz;
 
-
-import android.graphics.PorterDuff;
-import android.graphics.drawable.ColorDrawable;
 import android.os.CountDownTimer;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.graphics.Color;
-
 import com.apquiz.ante.flagquiz.Data.QuestionDbHelper;
-
 import com.apquiz.ante.flagquiz.model.QuestionModel;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -49,11 +41,14 @@ public class PlayActivity extends AppCompatActivity {
         score = 0;
         correctAnswerCounter = 0;
         i = 0;
+
         btn1 = (Button) findViewById(R.id.answeA);
         btn2 = (Button) findViewById(R.id.answeB);
         btn3 = (Button) findViewById(R.id.answeC);
         btn4 = (Button) findViewById(R.id.answeD);
+
         img = (ImageView) findViewById(R.id.rndImg);
+
         mTextFieldTimer = (TextView) findViewById(R.id.timer);
         mTextFieldScore = (TextView) findViewById(R.id.Score);
         mTextFieldBonusScore = (TextView) findViewById(R.id.bonusScore);
@@ -97,7 +92,7 @@ public class PlayActivity extends AppCompatActivity {
         if (index < questionPlay.size() - 1) {
             //if clicked button answer is equal to correct answer increase score
             if (clickedButton.getText().equals(questionPlay.get(index).getCorrectAnswer())) {
-                score = score + 10 * bonus(correctAnswerCounter);
+                score = score + 10 * ((correctAnswerCounter / 3) + 1);
                 correctAnswerCounter++;
             }
             //for wrong answer score is reduced by 3
@@ -118,7 +113,7 @@ public class PlayActivity extends AppCompatActivity {
             countDownTimer.cancel();
         }
 
-        mTextFieldBonusScore.setText("BONUS:\n x" + bonus(correctAnswerCounter));
+        mTextFieldBonusScore.setText("BONUS:\n x" + ((correctAnswerCounter / 3) + 1));
         mTextFieldScore.setText("score:\n " + score);
         showQuestion(index);
 
@@ -178,8 +173,7 @@ public class PlayActivity extends AppCompatActivity {
 
         if (score > highscore) {
             newHighscore.setText("new highscore!");
-        }
-        else
+        } else
             newHighscore.setText("");
 
         mBuilder.setView(mView);
@@ -205,9 +199,11 @@ public class PlayActivity extends AppCompatActivity {
                 closeGame();
                 dbHelper.deleteLowScore();
                 mDialog.dismiss();
+
             }
 
         });
+
     }
 
 
@@ -218,6 +214,7 @@ public class PlayActivity extends AppCompatActivity {
         View mView = getLayoutInflater().inflate(R.layout.activity_before_play, null);
 
         String randomDiduknow;
+
         final TextView diduknowmsg = (TextView) mView.findViewById(R.id.textViewGameRules);
         final TextView threeSec = (TextView) mView.findViewById(R.id.textView3secCount);
         final Button startbtn = (Button) mView.findViewById(R.id.buttonStartGame);
@@ -251,26 +248,16 @@ public class PlayActivity extends AppCompatActivity {
             }
         };
 
-
         startbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 threeSecTimer.start();
                 startbtn.setEnabled(false);
                 startbtn.setClickable(false);
-
             }
-
         });
 
 
-    }
-
-
-    // every 3 correct answers in row bonus increases by 1
-    public  int bonus(int correctAnswerinRow) {
-
-        return  (correctAnswerinRow / 3) + 1;
     }
 
     // close timer when user exits game by back button

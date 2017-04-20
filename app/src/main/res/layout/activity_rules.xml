@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:background="@drawable/backplay"
     android:layout_width="match_parent"
@@ -64,6 +65,10 @@
         android:padding="8dp"
         android:text="@string/have_fun" />
     </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
     <ImageView
         android:layout_margin="16dp"
         android:id="@+id/imageView2"
@@ -72,4 +77,13 @@
         android:layout_height="wrap_content"
         android:src="@drawable/mascotrules" />
 
+        <com.google.android.gms.ads.AdView
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/adView"
+            android:layout_width="320dp"
+            android:layout_height="50dp"
+            ads:adSize="SMART_BANNER"
+            ads:adUnitId="@string/banner_ad_unit_id"></com.google.android.gms.ads.AdView>
+    </RelativeLayout>
 </LinearLayout>

@@ -20,10 +20,10 @@
 
     <TableLayout
         android:layout_width="match_parent"
-        android:background="@drawable/button_shape"
         android:layout_height="0dp"
         android:layout_margin="32dp"
-        android:layout_weight="6">
+        android:layout_weight="6"
+        android:background="@drawable/button_shape">
 
         <TableRow
             android:layout_width="match_parent"
@@ -36,6 +36,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text=" 1.     "
+                android:textAllCaps="false"
                 android:textSize="14sp" />
 
             <TextView
@@ -43,17 +44,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="1234"
+                android:text="-"
                 android:textAllCaps="false"
-                android:textColor="@android:color/holo_red_dark"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 android:textStyle="bold" />
         </TableRow>
 
         <View
-            android:background="@color/colorPrimary"
             android:layout_width="match_parent"
-            android:layout_height="0.5dp" />
+            android:layout_height="0.5dp"
+            android:background="@color/colorPrimary" />
+
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -67,12 +68,12 @@
                 android:text=" 2.     " />
 
             <TextView
-                android:textColor="@color/colorPrimaryDark"
-                android:gravity="center"
                 android:id="@+id/textViewScore2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/line" />
+                android:gravity="center"
+                android:text="@string/line"
+                android:textColor="@color/colorPrimaryDark" />
         </TableRow>
 
         <TableRow
@@ -88,12 +89,12 @@
                 android:text=" 3.     " />
 
             <TextView
-                android:textColor="@color/colorPrimaryDark"
-                android:gravity="center"
                 android:id="@+id/textViewScore3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/line" />
+                android:gravity="center"
+                android:text="@string/line"
+                android:textColor="@color/colorPrimaryDark" />
         </TableRow>
 
         <TableRow
@@ -109,12 +110,12 @@
                 android:text=" 4.     " />
 
             <TextView
-                android:textColor="@color/colorPrimaryDark"
-                android:gravity="center"
                 android:id="@+id/textViewScore4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/line" />
+                android:gravity="center"
+                android:text="@string/line"
+                android:textColor="@color/colorPrimaryDark" />
         </TableRow>
 
         <TableRow
@@ -130,13 +131,13 @@
                 android:text=" 5.     " />
 
             <TextView
-                android:textColor="@color/colorPrimaryDark"
-
-                android:gravity="center"
                 android:id="@+id/textViewScore5"
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/line" />
+                android:gravity="center"
+                android:text="@string/line"
+                android:textColor="@color/colorPrimaryDark" />
         </TableRow>
 
         <TableRow
@@ -152,12 +153,12 @@
                 android:text=" 6.     " />
 
             <TextView
-                android:textColor="@color/colorPrimaryDark"
-                android:gravity="center"
                 android:id="@+id/textViewScore6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/line" />
+                android:gravity="center"
+                android:text="@string/line"
+                android:textColor="@color/colorPrimaryDark" />
         </TableRow>
 
         <TableRow
@@ -173,12 +174,12 @@
                 android:text=" 7.     " />
 
             <TextView
-                android:textColor="@color/colorPrimaryDark"
-                android:gravity="center"
                 android:id="@+id/textViewScore7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/line" />
+                android:gravity="center"
+                android:text="@string/line"
+                android:textColor="@color/colorPrimaryDark" />
         </TableRow>
 
         <TableRow
@@ -194,12 +195,12 @@
                 android:text=" 8.     " />
 
             <TextView
-                android:textColor="@color/colorPrimaryDark"
-                android:gravity="center"
                 android:id="@+id/textViewScore8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/line" />
+                android:gravity="center"
+                android:text="@string/line"
+                android:textColor="@color/colorPrimaryDark" />
         </TableRow>
 
         <TableRow
@@ -215,12 +216,12 @@
                 android:text=" 9.     " />
 
             <TextView
-                android:textColor="@color/colorPrimaryDark"
-                android:gravity="center"
                 android:id="@+id/textViewScore9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/line" />
+                android:gravity="center"
+                android:text="@string/line"
+                android:textColor="@color/colorPrimaryDark" />
         </TableRow>
 
         <TableRow
@@ -236,12 +237,12 @@
                 android:text="10.     " />
 
             <TextView
-                android:textColor="@color/colorPrimaryDark"
                 android:id="@+id/textViewScore10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="@string/line" />
+                android:text="@string/line"
+                android:textColor="@color/colorPrimaryDark" />
         </TableRow>
     </TableLayout>
 
